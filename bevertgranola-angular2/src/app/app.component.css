@@ -1,0 +1,43 @@
+@font-face {
+ font-family:robotoslab_regular;
+ src: url(../fonts/Roboto_Slab/RobotoSlab-Regular.ttf); /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family:robotoslab_bold;
+ src: url(../fonts/Roboto_Slab/RobotoSlab-Bold.ttf); /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family:chasingambers_one;
+ src: url(../fonts/Chasing_Embers/Chasing_Embers_One.ttf); /* TTF file for CSS3 browsers */
+}
+@font-face {
+ font-family:chasingambers_one;
+ src: url(../fonts/Chasing_Embers/Chasing_Embers_One.otf); 
+}
+body{
+    color:#212851;
+}
+.header{
+    height: 100px;
+}
+.header_nav{
+    vertical-align: middle;
+}
+nav a{
+    margin-right: 21px;
+    font-size: 15pt;
+    font-variant: small-caps;
+    font-family: robotoslab_regular;
+}
+nav a:hover{
+    font-family: robotoslab_bold;
+}
+.page_title{
+    font-size: 72pt;
+    font-family: chasingambers_one;
+}
+h2{
+    font-size: 72pt;
+    font-family: chasingambers_one;
+    margin-bottom: 45px;
+}

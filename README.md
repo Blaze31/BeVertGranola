@@ -1,2 +1,0 @@
-# BeVertGranola
-BeVertGranola website
