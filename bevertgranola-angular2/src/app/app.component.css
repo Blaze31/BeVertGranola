@@ -14,18 +14,15 @@
  font-family:chasingambers_one;
  src: url(../fonts/Chasing_Embers/Chasing_Embers_One.otf); 
 }
-body{
-    color:#212851;
+.navbar{
+    height: 100px
 }
-.header{
-    height: 100px;
-}
-.header_nav{
-    vertical-align: middle;
+nav li{
+    padding: -15px
 }
 nav a{
-    margin-right: 21px;
-    font-size: 15pt;
+    color: #212851;
+    font-size: 15px;
     font-variant: small-caps;
     font-family: robotoslab_regular;
 }
@@ -33,11 +30,14 @@ nav a:hover{
     font-family: robotoslab_bold;
 }
 .page_title{
+    text-align: center;
     font-size: 72pt;
     font-family: chasingambers_one;
+    color:#212851;
 }
 h2{
-    font-size: 72pt;
+    font-size: 72px;
     font-family: chasingambers_one;
     margin-bottom: 45px;
+    color:#212851;
 }

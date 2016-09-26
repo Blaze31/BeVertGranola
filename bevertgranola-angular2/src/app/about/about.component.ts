@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {  } from '';
 
 @Component({
     templateUrl: 'about.component.html',
