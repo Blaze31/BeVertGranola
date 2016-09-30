@@ -1,35 +1,33 @@
- @media(max-width:1374px){
-    @font-face {
-    font-family:robotoslab_regular;
-    src: url(../fonts/Roboto_Slab/RobotoSlab-Regular.ttf); /* TTF file for CSS3 browsers */
-    }
-    @font-face {
-    font-family:robotoslab_bold;
-    src: url(../fonts/Roboto_Slab/RobotoSlab-Bold.ttf); /* TTF file for CSS3 browsers */
-    }
-    @font-face {
-    font-family:chasingambers_one;
-    src: url(../fonts/Chasing_Embers/Chasing_Embers_One.ttf); /* TTF file for CSS3 browsers */
-    }
-    @font-face {
-    font-family:chasingambers_one;
-    src: url(../fonts/Chasing_Embers/Chasing_Embers_One.otf); 
-    }
-    nav a{
-        color: #212851!important;
-        font-size: 15px;
-        font-variant: small-caps;
-        font-family: robotoslab_regular;
-    }
-    nav a:hover{
-        font-family: robotoslab_bold;
-    }
-    .navbar-brand{
-        font-size: 72px;
-        font-family: chasingambers_one;
-        color:#212851!important;
-    }
-    .content{
-        padding-left: 267px;   
-    }
+@font-face {
+font-family:robotoslab_regular;
+src: url(../fonts/Roboto_Slab/RobotoSlab-Regular.ttf); /* TTF file for CSS3 browsers */
+}
+@font-face {
+font-family:robotoslab_bold;
+src: url(../fonts/Roboto_Slab/RobotoSlab-Bold.ttf); /* TTF file for CSS3 browsers */
+}
+@font-face {
+font-family:chasingambers_one;
+src: url(../fonts/Chasing_Embers/Chasing_Embers_One.ttf); /* TTF file for CSS3 browsers */
+src: url(../fonts/Chasing_Embers/Chasing_Embers_One.otf?#iefix); 
+}
+nav a{
+    color: #212851!important;
+    font-size: 15px;
+    font-variant: small-caps;
+    font-family: robotoslab_regular;
+}
+nav a:hover{
+    font-family: robotoslab_bold;
+}
+.navbar-header {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {
+    color: #212851!important;
+    font-size: 72px;
+    font-family: chasingambers_one;
+    float:none;
 }

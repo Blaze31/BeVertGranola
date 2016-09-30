@@ -1,18 +1,8 @@
-/**
- * AngularJS Tutorial 1
- * @author Nick Kaye <nick.c.kaye@gmail.com>
- */
-
-/**
- * Main AngularJS Web Application
- */
 var app = angular.module('beVertGranolaApp', [
-  'ngRoute'
+  'ngRoute',
+  'ui.bootstrap'
 ]);
 
-/**
- * Configure the Routes
- */
 app.config(['$locationProvider','$routeProvider', function ($locationProvider,$routeProvider) {
   $locationProvider.hashPrefix();
   $routeProvider
@@ -24,19 +14,7 @@ app.config(['$locationProvider','$routeProvider', function ($locationProvider,$r
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
-/**
- * Controls all other Pages
- */
+
 app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   console.log("Page Controller reporting for duty.");
-
-  // Activates the Carousel
-  $('.carousel').carousel({
-    interval: 5000
-  });
-
-  // Activates Tooltips for Social Links
-  $('.tooltip-social').tooltip({
-    selector: "a[data-toggle=tooltip]"
-  })
 });
