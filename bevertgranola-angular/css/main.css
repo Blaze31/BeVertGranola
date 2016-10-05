@@ -11,6 +11,11 @@ font-family:chasingambers_one;
 src: url(../fonts/Chasing_Embers/Chasing_Embers_One.ttf); /* TTF file for CSS3 browsers */
 src: url(../fonts/Chasing_Embers/Chasing_Embers_One.otf?#iefix); 
 }
+@font-face {
+font-family:chasingambers_two;
+src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.ttf); /* TTF file for CSS3 browsers */
+src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix); 
+}
 nav a{
     color: #212851!important;
     font-size: 15px;
@@ -27,7 +32,27 @@ nav a:hover{
 }
 .navbar-brand {
     color: #212851!important;
-    font-size: 72px;
+    font-size: 72pt;
     font-family: chasingambers_one;
     float:none;
+}
+div .col-md-12{
+    padding: 0px;
+}
+h2{
+    margin-top: 100px;
+    margin-bottom: 45px;
+    color: #212851!important;
+    font-size: 72px;
+    font-family: chasingambers_one;
+}
+span .text{
+    color: #212851!important;
+    font-size: 13px;
+    font-family: robotoslab_regular;
+    text-align: center;
+}
+.content{
+    margin-left: 267px;
+    margin-right: 333px;
 }

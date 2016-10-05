@@ -16,5 +16,4 @@ app.config(['$locationProvider','$routeProvider', function ($locationProvider,$r
 }]);
 
 app.controller('PageCtrl', function (/* $scope, $location, $http */) {
-  console.log("Page Controller reporting for duty.");
 });

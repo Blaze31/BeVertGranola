@@ -1,19 +1,18 @@
-var app = angular.module('beVertGranolaApp', []);
+//var app = angular.module('beVertGranolaApp', []);
 
-app.controller('aboutCtrl',['$scope', function ($scope) {
-
- $scope.myInterval = 5000;
+app.controller('carouselCtrl',['$scope', function ($scope) {
+  $scope.myInterval = 5000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
   var slides = $scope.slides = [];
   var currIndex = 0;
-
+  var images = ['../images/diapo_01.jpg','../images/diapo_02.jpg','../images/diapo_03.jpg'];
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
     slides.push({
-      image: '//unsplash.it/' + newWidth + '/300',
-      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
-      id: currIndex++
+      image: images[currIndex],
+      //text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+     id: currIndex++
     });
   };
 
@@ -21,8 +20,8 @@ app.controller('aboutCtrl',['$scope', function ($scope) {
     var indexes = generateIndexesArray();
     assignNewIndexesToSlides(indexes);
   };
-
-  for (var i = 0; i < 4; i++) {
+  console.log(images);
+  for (var i = 0; i < 3; i++) {
     $scope.addSlide();
   }
 
