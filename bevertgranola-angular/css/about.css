@@ -1,0 +1,12 @@
+.section_nous{
+    background-image: url('../images/nous_fond.jpg');
+}
+.invert_section{
+    background-color: #212851!important;
+}
+.section_content{
+    margin-left: 267px;
+}
+.section_about_content{
+    margin-left: 66px; 
+}

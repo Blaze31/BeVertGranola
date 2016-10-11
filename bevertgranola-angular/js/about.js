@@ -20,7 +20,7 @@ app.controller('carouselCtrl',['$scope', function ($scope) {
     var indexes = generateIndexesArray();
     assignNewIndexesToSlides(indexes);
   };
-  console.log(images);
+  
   for (var i = 0; i < 3; i++) {
     $scope.addSlide();
   }

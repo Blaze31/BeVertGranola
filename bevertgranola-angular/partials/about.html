@@ -1,28 +1,35 @@
+<link rel="stylesheet" href="css/about.css">
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div ng-controller="carouselCtrl">
-                <div style="height: 305px">
-                    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                            <img ng-src="{{slide.image}}" style="margin:auto;">
-                            <div class="carousel-caption">
-                            <!--<h4>Slide {{slide.id}}</h4>-->
-                            <p>{{slide.text}}</p>
-                            </div>
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                        <!--<h4>Slide {{slide.id}}</h4>-->
+                        <p>{{slide.text}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>nous</h2>
-            <span class="text">
-                <p>Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties rehaussé de noix de coco, infusé dans un beurre au parfum de vanille. Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.</p>
+    <div class="row section_nous">
+        <div class="col-md-12" >
+            <span class="section_title">nous</span>
+            <div class="section_about_content" >
+                <span>Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties</span> 
+                <span>rehaussé de noix de coco, infusé dans un beurre au parfum de vanille.</span>
+                <span>Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.</span>
+                <br>
                 <p>Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green plane</p>
-            </span>
+            </div>
+        </div>
+    </div>
+    <div class="row invert_section">
+        <div class="col-md-12">
+            <span class="section_title_invert">nous trouver</span>
         </div>
     </div>
 </div>
