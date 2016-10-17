@@ -3,9 +3,11 @@
 }
 .invert_section{
     background-color: #212851!important;
+    color: white!important;
+    width: 100%;
 }
 .section_content{
-    margin-left: 267px;
+    text-align: center;
 }
 .section_about_content{
     margin-left: 66px; 

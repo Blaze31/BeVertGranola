@@ -55,6 +55,14 @@ div .col-md-12{
     font-size: 72px;
     font-family: chasingambers_one!important;
 }
+.text_invert{
+    color: white!important;
+    font-size: 13px;
+    font-family: robotoslab_regular!important;
+}
+.sub_title{
+    font-family: robotoslab_bold!important;
+}
 .text{
     color: #212851!important;
     font-size: 13px;
