@@ -15,18 +15,13 @@ app.controller('carouselCtrl',['$scope', function ($scope) {
      id: currIndex++
     });
   };
-
   $scope.randomize = function() {
     var indexes = generateIndexesArray();
     assignNewIndexesToSlides(indexes);
   };
-  
   for (var i = 0; i < 3; i++) {
     $scope.addSlide();
   }
-
-  // Randomize logic below
-
   function assignNewIndexesToSlides(indexes) {
     for (var i = 0, l = slides.length; i < l; i++) {
       slides[i].id = indexes.pop();
@@ -40,8 +35,6 @@ app.controller('carouselCtrl',['$scope', function ($scope) {
     }
     return shuffle(indexes);
   }
-
-  // http://stackoverflow.com/questions/962802#962890
   function shuffle(array) {
     var tmp, current, top = array.length;
 

@@ -16,6 +16,9 @@ font-family:chasingambers_two;
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.ttf); /* TTF file for CSS3 browsers */
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix); 
 }
+body{
+    color: #212851;
+}
 nav{
     margin: 0px!important;
     margin-top:50%; 
@@ -28,23 +31,29 @@ nav a{
     padding: 5px!important;
     margin: 15px;
 }
-nav a:hover{
+nav a .active{
     font-family: robotoslab_bold!important;
     border-bottom: 5px solid #212851!important;
+}
+nav li .active{
+    font-family: robotoslab_bold!important;
+    border-bottom: 5px solid #212851!important;
+}
+nav a:hover{
+    font-family: robotoslab_bold!important;
 }
 .navbar-header {
     text-align: center;
     width: 100%;
 }
-.navbar-brand {
-}
 div .col-md-12{
     padding: 0px;
 }
 .section_title{
-    color: #212851!important;
     font-size: 72px;
     font-family: chasingambers_one!important;
+    float: left;
+    margin-bottom: 45px;
 }
 .section_title_invert{
     color: white!important;
@@ -64,4 +73,7 @@ div .col-md-12{
     font-size: 13px;
     font-family: robotoslab_regular!important;
     text-align: center;
+}
+.nav, .pagination, .carousel, .panel-title a { 
+    cursor: pointer;
 }

@@ -1,97 +1,123 @@
 <link rel="stylesheet" href="css/about.css">
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div ng-controller="carouselCtrl">
-                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                        <img ng-src="{{slide.image}}" style="margin:auto;">
-                        <div class="carousel-caption">
-                        <!--<h4>Slide {{slide.id}}</h4>-->
-                        <p>{{slide.text}}</p>
+    <!--******************************CAROUSSEL********************************-->
+    <div style="height:350px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div ng-controller="carouselCtrl">
+                    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                            <img ng-src="{{slide.image}}" style="margin:auto;">
+                            <div class="carousel-caption">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row section_nous">
-        <div class="col-md-12" >
-            <span class="section_title">nous</span>
-            <div class="section_about_content" >
-                <span>Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties</span> 
-                <span>rehaussé de noix de coco, infusé dans un beurre au parfum de vanille.</span>
-                <span>Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.</span>
-                <br>
-                <span>Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green plane</span>
+    <!--****************************SECTION NOUS*******************************-->
+    <div class="" style="height:350px;">
+        <div class="content" >
+            <div class="row">
+                <div class="col-md-12" >
+                    <span class="section_title">nous</span>
+                </div>
+            </div>
+            <div class="section_content">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <span>Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties rehaussé de noix de coco, infusé dans un beurre au parfum de vanille.</span>
+                        <span>Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.</span>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-12" >
+                        <span>Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green planet</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row invert_section">
-        <div class="col-md-12">
-            <span class="section_title_invert">nous trouver</span>
+    <!--************************SECTION NOUS TROUVER***************************-->
+    <div class="invert_section" style="height:350px;">
+        <div class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="section_title">nous trouver</span>
+                </div>
+            </div>
+            <div class="section_content">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <span class="sub_title">Crime et gourmandise</span><br/>
+                        <span>38 Rue Green,</span><br/>
+                        <span>Saint-Lambert, QC J4P 1R9</span><br/>
+                        <span>450.812.9281</span><br/>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="sub_title">Richmond</span><br/>
+                        <span>333 Richmond,</span><br/>
+                        <span>Montréal, QC H3J 1T9</span><br/>
+                        <span>514.508.8749</span><br/>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="sub_title" >L'autre choix</span><br/>
+                        <span>330 Avenue Victoria,</span><br/>
+                        <span>Westmount, QC H3Z 2M8</span><br/>
+                        <span>514.369.1888</span><br/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <span class="sub_title" >Indigo Café</span><br/>
+                        <span>38 Rue Green,</span><br/>
+                        <span>Saint-Lambert, QC J4P 1R9</span><br/>
+                        <span>450.812.9281</span><br/>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="sub_title">Maitre Boucher</span><br/>
+                        <span>38 Rue Green,</span><br/>
+                        <span>Saint-Lambert, QC J4P 1R9</span><br/>
+                        <span>450.812.9281</span><br/>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="sub_title">Fou d'ici</span><br/>
+                        <span>38 Rue Green,</span><br/>
+                        <span>Saint-Lambert, QC J4P 1R9</span><br/>
+                        <span>450.812.9281</span><br/>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row invert_section">
-        <div class="col-md-4 ">
-            <span class="sub_title">Crime et gourmandise</span><br/>
-            <span>38 Rue Green,</span><br/>
-            <span>Saint-Lambert, QC J4P 1R9</span><br/>
-            <span>450.812.9281</span><br/>
+    <!--*************************SECTION NOUS SUIVRE***************************-->
+    <div class="content" style="height:290px;">
+        <div class="row">
+            <div class="col-md-12" >
+                <span class="section_title">nous suivre</span>
+            </div>
         </div>
-        <div class="col-md-4">
-            <span class="sub_title">Richmond</span><br/>
-            <span>333 Richmond,</span><br/>
-            <span>Montréal, QC H3J 1T9</span><br/>
-            <span>514.508.8749</span><br/>
-        </div>
-        <div class="col-md-4">
-            <span class="sub_title" >L'autre choix</span><br/>
-            <span>330 Avenue Victoria,</span><br/>
-            <span>Westmount, QC H3Z 2M8</span><br/>
-            <span>514.369.1888</span><br/>
-        </div>
-    </div>
-    <div class="row invert_section">
-        <div class="col-md-4 ">
-            <span class="sub_title" >Indigo Café</span><br/>
-            <span>38 Rue Green,</span><br/>
-            <span>Saint-Lambert, QC J4P 1R9</span><br/>
-            <span>450.812.9281</span><br/>
-        </div>
-        <div class="col-md-4">
-            <span class="sub_title">Maitre Boucher</span><br/>
-            <span>38 Rue Green,</span><br/>
-            <span>Saint-Lambert, QC J4P 1R9</span><br/>
-            <span>450.812.9281</span><br/>
-        </div>
-        <div class="col-md-4">
-            <span class="sub_title">Fou d'ici</span><br/>
-            <span>38 Rue Green,</span><br/>
-            <span>Saint-Lambert, QC J4P 1R9</span><br/>
-            <span>450.812.9281</span><br/>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12" >
-            <span class="section_title">nous suivre</span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4" >
-            <span>514.891.1841</span><br/>
-            <span>bevert.granola@gmail.com</span><br/>
-            <span>be-vert.com</span>
-        </div>
-        <div class="col-md-4" >
-            <img src="../images/facebook.png"/>
-            <img src="../images/instagram.png"/>
-            <img src="../images/pinterest.png"/>
-        </div>
-        <div class="col-md-4" >
-            <span >gardons contact|stay in touch</span><br/>
-            <input placeholder=" votre adresse | your email"/><br/>
-            <button>s'abonner</button>
+        <div class="section_content">
+            <div class="row">
+                <div class="col-md-4" >
+                    <span>514.891.1841</span><br/>
+                    <span>bevert.granola@gmail.com</span><br/>
+                    <span>be-vert.com</span>
+                </div>
+                <div class="col-md-4" >
+                    <img src="../images/facebook.png"/>
+                    <img src="../images/instagram.png"/>
+                    <img src="../images/pinterest.png"/>
+                </div>
+                <div class="col-md-4" >
+                    <span >gardons contact|stay in touch</span><br/>
+                    <input placeholder=" votre adresse | your email"/><br/>
+                    <button>s'abonner</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
