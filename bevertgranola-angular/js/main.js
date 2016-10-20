@@ -10,7 +10,7 @@ app.config(['$locationProvider','$routeProvider', function ($locationProvider,$r
     .when("/", {templateUrl: "partials/about.html", controller: "PageCtrl"})
     // Pages
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-    .when("/store", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
+    .when("/store", {templateUrl: "partials/store.html", controller: "PageCtrl"})
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);

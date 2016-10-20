@@ -1,22 +1,43 @@
-.section_nous{
-    background-image: url('../images/nous_fond.jpg');
-}
 .invert_section{
     background-color: #212851!important;
     color: white!important;
+    margin-left: -20px;
+    margin-left: -20px;
 }
 .content{
     text-align: center;
     padding-left: 267px;
     padding-right: 333px;
-    font-size: 13px;
+    font-size: 14px;
     font-family: robotoslab_regular;
     height: 100%;
     width: 100%;
 }
+.section_nous{
+    background-image: url('../images/nous_fond.jpg');
+    no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .section_content{
-    padding-left: 66px; 
+    padding-left: 66px;
 }
 .section_about_content{
     margin-left: 66px; 
+}
+input{
+    text-align: center;
+    width: 230px;
+    height: 40px;
+    margin: 10px;
+    border: 1px solid #212851!important;
+}
+.social_icon{
+    margin: 5px;
+    width: 37px;
+    height: 38px;
+    border: none!important;
 }
