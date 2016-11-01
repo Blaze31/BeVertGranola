@@ -17,8 +17,7 @@ src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.ttf); /* TTF file for CSS3 b
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix); 
 }
 body{
-    color: #212851;
-    font-size: 13px;
+    font-size: 13pt;
 }
 nav{
     margin: 0px!important;
@@ -26,7 +25,7 @@ nav{
 }
 nav a{
     color: #212851!important;
-    font-size: 15px;
+    font-size: 15pt;
     font-variant: small-caps;
     font-family: robotoslab_regular!important;
     padding: 5px!important;
@@ -43,23 +42,23 @@ nav li .active{
 nav a:hover{
     font-family: robotoslab_bold!important;
 }
-.navbar-header {
-    text-align: center;
-    width: 100%;
-}
 div .col-md-12{
     padding: 0px;
 }
+.brand_logo{
+    height: 75px; 
+}
 .section_title{
-    font-size: 72px;
+    color:  #212851;
+    font-size: 72pt;
     font-family: chasingambers_one!important;
     float: left;
-    margin-bottom: 40px;
 }
 .section_title_invert{
     color: white!important;
     font-size: 72px;
     font-family: chasingambers_one!important;
+    float: left;
 }
 .text_invert{
     color: white!important;
@@ -71,7 +70,7 @@ div .col-md-12{
 }
 .text{
     color: #212851!important;
-    font-size: 13px;
+    font-size: 14pt;
     font-family: robotoslab_regular!important;
     text-align: center;
 }
@@ -88,4 +87,50 @@ button{
     padding-bottom: 5px;
     padding-left: 30px;
     padding-right: 30px;
+}
+@media (max-width: 1300px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+   .navbar-nav .open .dropdown-menu {
+       position: static;
+       float: none;
+       width: auto;
+       margin-top: 0;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    }
 }

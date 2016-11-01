@@ -20,6 +20,9 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
   
   
   function setActiveLink(path){
+    if(path == ""){
+      path ='about';
+    }
     var id = "#link_" + path;
     $(".nav").find(id).addClass("active");
   }

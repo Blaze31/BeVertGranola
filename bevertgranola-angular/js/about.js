@@ -50,3 +50,14 @@ app.controller('carouselCtrl',['$scope', function ($scope) {
     return array;
   }
 }]);
+
+app.controller('aboutCtrl',['$scope',function($scope){
+  $scope.redirect = function(path){
+    if(path =="facebook"){
+      window.open('https://www.facebook.com/bevertgranola','_blank');
+    }
+    if(path == 'instagram'){
+       window.open('https://www.instagram.com/bevert_granola/','_blank');
+    }
+  }
+}]);
