@@ -29,7 +29,7 @@ nav a{
     font-variant: small-caps;
     font-family: robotoslab_regular!important;
     padding: 5px!important;
-    margin: 15px;
+    margin: 10px;
     width: fit-content;
 }
 nav a .active{
@@ -47,7 +47,7 @@ div .col-md-12{
     padding: 0px;
 }
 .brand_logo{
-    height: 75px; 
+    height: 75px;
 }
 .section_title{
     color:  #212851;

@@ -2,17 +2,11 @@
 <link rel="stylesheet" href="css/about.css">
 <div class="container-fluid" style="padding:0px">
     <!--******************************CAROUSSEL********************************-->
-    <div>
-        <div class="row">
-            <div class="col-md-12">
-                <div ng-controller="carouselCtrl">
-                    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                            <img ng-src="{{slide.image}}" style="margin:auto;max-width: auto;min-height: 350px;height: auto;width: auto\9; /* ie8 */">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
+    <div ng-controller="carouselCtrl">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:0 auto;max-width: 100%;min-height: 350px;height: auto;width: auto\9; /* ie8 */">
+                <div class="carousel-caption">
                 </div>
             </div>
         </div>

@@ -7,59 +7,58 @@
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
-<head>
+    <head>
 
-    <!-- Meta-Information -->
-    <title>BeVertGranola</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="BeVertGranola">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Meta-Information -->
+        <title>BeVertGranola</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="BeVertGranola">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+        <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+        <!-- Our Website CSS Styles -->
+        <link rel="stylesheet" href="css/main.css">
 
-    <!-- Our Website CSS Styles -->
-    <link rel="stylesheet" href="css/main.css">
 
+    </head>
+    <body ng-app="beVertGranolaApp">
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-</head>
-<body ng-app="beVertGranolaApp">
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+    <!-- Our Website Content Goes Here -->
+    <header></header>
+    <div ng-view></div>
 
-<!-- Our Website Content Goes Here -->
-<header></header>
-<div ng-view></div>
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDjoL9R1SJKcGATdSnnTvLRvKWrB0phkpQ",
+        authDomain: "bevertgranola-406c1.firebaseapp.com",
+        databaseURL: "https://bevertgranola-406c1.firebaseio.com",
+        storageBucket: "bevertgranola-406c1.appspot.com",
+        messagingSenderId: "191039513422"
+    };
+    firebase.initializeApp(config);
+    </script>
 
-<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDjoL9R1SJKcGATdSnnTvLRvKWrB0phkpQ",
-    authDomain: "bevertgranola-406c1.firebaseapp.com",
-    databaseURL: "https://bevertgranola-406c1.firebaseio.com",
-    storageBucket: "bevertgranola-406c1.appspot.com",
-    messagingSenderId: "191039513422"
-  };
-  firebase.initializeApp(config);
-</script>
+    <!-- Vendor: Javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="js/ui-boostrap-tpls-2.1.4.min.js"></script>
 
-<!-- Vendor: Javascripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- Vendor: Angular, followed by our custom Javascripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-<script src="js/ui-boostrap-tpls-2.1.4.min.js"></script>
-
-<!-- Our Website Javascripts -->
-<script src="js/main.js"></script>
-<script src="js/about.js"></script>
-<script src="js/header.js"></script>
-</body>
+    <!-- Our Website Javascripts -->
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/header.js"></script>
+    </body>
 </html>
