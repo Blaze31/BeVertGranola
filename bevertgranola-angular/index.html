@@ -19,7 +19,7 @@
     <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
     <!-- Our Website CSS Styles -->
     <link rel="stylesheet" href="css/main.css">
@@ -36,12 +36,25 @@
 <header></header>
 <div ng-view></div>
 
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDjoL9R1SJKcGATdSnnTvLRvKWrB0phkpQ",
+    authDomain: "bevertgranola-406c1.firebaseapp.com",
+    databaseURL: "https://bevertgranola-406c1.firebaseio.com",
+    storageBucket: "bevertgranola-406c1.appspot.com",
+    messagingSenderId: "191039513422"
+  };
+  firebase.initializeApp(config);
+</script>
+
 <!-- Vendor: Javascripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- Vendor: Angular, followed by our custom Javascripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 <script src="js/ui-boostrap-tpls-2.1.4.min.js"></script>
 
 <!-- Our Website Javascripts -->

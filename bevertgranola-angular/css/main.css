@@ -30,6 +30,7 @@ nav a{
     font-family: robotoslab_regular!important;
     padding: 5px!important;
     margin: 15px;
+    width: fit-content;
 }
 nav a .active{
     font-family: robotoslab_bold!important;

@@ -8,7 +8,7 @@
                 <div ng-controller="carouselCtrl">
                     <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
                         <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                            <img ng-src="{{slide.image}}" style="margin:auto;max-width: 100%;min-height: 350px;height: auto;width: auto\9; /* ie8 */">
+                            <img ng-src="{{slide.image}}" style="margin:auto;max-width: auto;min-height: 350px;height: auto;width: auto\9; /* ie8 */">
                             <div class="carousel-caption">
                             </div>
                         </div>

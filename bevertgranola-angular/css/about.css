@@ -1,8 +1,6 @@
 .invert_section{
     background-color: #212851!important;
     color: white!important;
-    margin-left: -20px;
-    margin-left: -20px;
 }
 .content{
     text-align: center;
@@ -11,7 +9,7 @@
     font-size: 13pt;
     font-family: robotoslab_regular;
     height: 100%;
-    width: 100%;
+    width: auto;
 }
 .section_nous{
     background-image: url('../images/nous_fond.jpg');
