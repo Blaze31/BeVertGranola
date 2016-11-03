@@ -34,3 +34,6 @@ input{
     height: 38px;
     border: none!important;
 }
+table{
+    margin: 22px;
+}

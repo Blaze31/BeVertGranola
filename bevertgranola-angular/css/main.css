@@ -75,6 +75,12 @@ div .col-md-12{
     font-family: robotoslab_regular!important;
     text-align: center;
 }
+.text_bold{
+    color: #212851!important;
+    font-size: 14pt;
+    font-family: robotoslab_bold!important;
+    text-align: center;
+}
 .nav, .pagination, .carousel, .panel-title a { 
     cursor: pointer;
 }
