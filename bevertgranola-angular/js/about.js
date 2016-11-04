@@ -1,5 +1,3 @@
-//var app = angular.module('beVertGranolaApp', []);
-
 app.controller('carouselCtrl',['$scope', function ($scope) {
   $scope.myInterval = 5000;
   $scope.noWrapSlides = false;

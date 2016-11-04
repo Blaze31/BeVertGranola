@@ -17,7 +17,7 @@ src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.ttf); /* TTF file for CSS3 b
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix); 
 }
 body{
-    font-size: 13pt;
+    font-size: 11pt;
 }
 nav{
     margin: 0px!important;
@@ -51,19 +51,19 @@ div .col-md-12{
 }
 .section_title{
     color:  #212851;
-    font-size: 72pt;
+    font-size: 50pt;
     font-family: chasingambers_one!important;
     float: left;
 }
 .section_title_invert{
     color: white!important;
-    font-size: 72px;
+    font-size: 50pt;
     font-family: chasingambers_one!important;
     float: left;
 }
 .text_invert{
     color: white!important;
-    font-size: 13px;
+    font-size: 11pt;
     font-family: robotoslab_regular!important;
 }
 .sub_title{
@@ -71,13 +71,13 @@ div .col-md-12{
 }
 .text{
     color: #212851!important;
-    font-size: 14pt;
+    font-size: 11pt;
     font-family: robotoslab_regular!important;
     text-align: center;
 }
 .text_bold{
     color: #212851!important;
-    font-size: 14pt;
+    font-size: 11pt;
     font-family: robotoslab_bold!important;
     text-align: center;
 }
@@ -95,7 +95,7 @@ button{
     padding-left: 30px;
     padding-right: 30px;
 }
-@media (max-width: 1300px) {
+/*@media (max-width: 1300px) {
     .navbar-header {
         float: none;
     }
@@ -140,4 +140,4 @@ button{
        -webkit-box-shadow: none;
        box-shadow: none;
     }
-}
+}*/
