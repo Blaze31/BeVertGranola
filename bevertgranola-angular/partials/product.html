@@ -1,3 +1,11 @@
+<!--
+Test card number authorized
+4242424242424242
+4012888888881881
+5555555555554444
+Test card declined
+4000000000000002
+-->
 <div class="container-fluid">
     <div ng-controller="productCtrl">
         <div style="">
@@ -17,6 +25,18 @@
                         <input style="border:1px solid"/>
                     </div>
                     <div>
+                        <button
+                            class="snipcart-add-item"
+                            data-item-id="{{selectedProduct.id}}"
+                            data-item-name="{{selectedProduct.title}}"
+                            data-item-price="{{selectedProduct.price}} "
+                            data-item-weight="{{selectedProduct.weight}}"
+                            data-item-url="{{selectedProduct.url}}"
+                            data-item-description="{{selectedProduct.description}}">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                    <div>
                         <span class="text">Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties<br/>
                         rehaussé de noix de coco, infusé dans un beurre au parfum de vanille.<br/>
                         Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.</span>
@@ -33,7 +53,7 @@
                         <span>Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio. </span>
                     </div>
                     <div>
-                        <img src="../images/vn_01.jpg"/>
+                        <img src="{{selectedProduct.ing}}"/>
                     </div>
                 </div>
             </div>

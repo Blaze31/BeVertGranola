@@ -25,11 +25,11 @@ nav{
 }
 nav a{
     color: #212851!important;
-    font-size: 15pt;
+    font-size: 12pt;
     font-variant: small-caps;
     font-family: robotoslab_regular!important;
-    padding: 5px!important;
     margin: 10px;
+    padding: 0px!important;
     width: fit-content;
 }
 nav a .active{
