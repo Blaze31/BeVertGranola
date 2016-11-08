@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "price": "12.00 $",
+        "url": "/", 
+        "img": "../images/sac_02.jpg",
+        "ing": "../images/vn_01.jpg", 
+        "title": "Amandes & coco", 
+        "weight": 300,
+        "description": "Amandes & coco"
+    },
+    {
+        "id": 2,
+        "price": "12.00 $",
+        "url": "/",
+        "img": "../images/sac_02.jpg",
+        "ing": "../images/vn_02.jpg", 
+        "title": "Érables & pacanes",
+        "weight": 300,
+        "description": "Érables & pacanes"
+        }
+]

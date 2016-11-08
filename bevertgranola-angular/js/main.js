@@ -4,10 +4,20 @@ var app = angular.module('beVertGranolaApp', [
 ])
 .factory('productService', function () {
         var selectedProduct = '';
-        var productsList = [{id: 1, img:'../images/sac_02.jpg',ing:"../images/vn_01.jpg", title:'Amandes & coco', price:'12.00 $',weight:'300',url:'https://bevertgranola-406c1.firebaseapp.com/',description:'Amandes & coco'},
-                            {id: 2,img:'../images/sac_02.jpg',ing:"../images/vn_02.jpg", title:'Érables & pacanes', price:'12.00 $',weight:'300',url:'https://bevertgranola-406c1.firebaseapp.com/',description:'Érables & pacanes'}];
-
+        var productsList = [];
+        
+        initProductsList();
+        function initProductsList(){
+            $.getJSON("../products.json", function(json){
+            productsList = json;
+            console.log(json);
+            return json;
+          });
+        }
         return {
+            initProductList: function(){
+              getProductList
+            },
             getSelectedProduct: function () {
                 return selectedProduct;
             },
@@ -15,7 +25,11 @@ var app = angular.module('beVertGranolaApp', [
                 selectedProduct = value;
             },
             getProductsList: function(){
-              return productsList;
+              if(productsList){
+                return productsList;
+              }else{
+                return initProductsList();
+              }
             },
             getProductId: function(id){
               var elementPos = productsList.map(function(x){return x.id;}).indexOf(id);
@@ -40,7 +54,8 @@ app.config(['$locationProvider','$routeProvider', function ($locationProvider,$r
     //.otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
 
-app.controller('PageCtrl', function ( $scope, $location, $http ) {
+app.controller('PageCtrl', ['$scope','$location','$http','productService', function ( $scope, $location, $http, productService) {
+  console.log("Called!!");
   var path = $location.path();
   setActiveLink(path.replace("/",""),$location);
   $('#hidden_1').hide();
@@ -63,4 +78,4 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
     $(".nav").find(".active").removeClass("active");
     $(".nav").find(id).addClass("active");
   }
-});
+}]);
