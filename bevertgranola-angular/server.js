@@ -4,8 +4,8 @@ var path = require('path');
 
 // viewed at http://localhost:8080
 app.use(express.static(__dirname));
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendFile('index.html', { root: __dirname });
 });
-
 app.listen(8080);

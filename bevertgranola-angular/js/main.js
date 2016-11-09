@@ -2,21 +2,18 @@ var app = angular.module('beVertGranolaApp', [
   'ngRoute',
   'ui.bootstrap'
 ])
-.factory('productService', function () {
+.factory('productService', function ($http, $q) {
         var selectedProduct = '';
         var productsList = [];
-        
-        initProductsList();
-        function initProductsList(){
-            $.getJSON("../products.json", function(json){
-            productsList = json;
-            console.log(json);
-            return json;
+
+        function init(){
+          $http.get('../products.json').then(function(response){
+            productsList = response.data;
           });
         }
         return {
-            initProductList: function(){
-              getProductList
+            initProductService: function(){
+              init();
             },
             getSelectedProduct: function () {
                 return selectedProduct;
@@ -25,11 +22,7 @@ var app = angular.module('beVertGranolaApp', [
                 selectedProduct = value;
             },
             getProductsList: function(){
-              if(productsList){
-                return productsList;
-              }else{
-                return initProductsList();
-              }
+              return productsList;
             },
             getProductId: function(id){
               var elementPos = productsList.map(function(x){return x.id;}).indexOf(id);
@@ -38,44 +31,54 @@ var app = angular.module('beVertGranolaApp', [
         };
 });
 
-app.config(['$locationProvider','$routeProvider', function ($locationProvider,$routeProvider) {
-  $locationProvider.hashPrefix();
+app.config(['$locationProvider','$routeProvider', function ($locationProvider,$routeProvider,productService) {
+  $locationProvider.hashPrefix('').html5Mode(true);
   $routeProvider
     // Home
     .when("/", {templateUrl: "partials/about.html", controller: "PageCtrl"})
     .when("/!/", {templateUrl: "partials/about.html", controller: "PageCtrl"})
     // Pages
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-    .when("/about!/", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-    .when("/store", {templateUrl: "partials/store.html", controller: "PageCtrl"})
-    .when("/store!/", {templateUrl: "partials/store.html", controller: "PageCtrl"})
-    .when("/store/:id", {templateUrl: "partials/product.html", controller: "PageCtrl"})
+    //.when("/about!/", {templateUrl: "partials/about.html", controller: "PageCtrl"})
+    .when("/store", {templateUrl: "partials/store.html", controller: "PageCtrl", resolve: {products:function(productService){return productService.initProductService(); }}})
+    //.when("/store!/", {templateUrl: "partials/store.html", controller: "PageCtrl", resolve: {products:function(productService){return productService.getProductsList(); }}})
+    .when("/store/:id", {templateUrl: "partials/product.html", controller: "PageCtrl", resolve: {products:function(productService){return productService.initProductService(); }}})
     // else 404
-    //.otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+    //.otherwise("/", {templateUrl: "partials/about.html", controller: "PageCtrl"});
 }]);
 
 app.controller('PageCtrl', ['$scope','$location','$http','productService', function ( $scope, $location, $http, productService) {
-  console.log("Called!!");
   var path = $location.path();
   setActiveLink(path.replace("/",""),$location);
-  $('#hidden_1').hide();
-  $('#hidden_2').hide();
 
   function setActiveLink(path,$location){
-    if(path.indexOf('!') > -1){
+    /*if(path.indexOf('!') > -1){
       var pos = path.indexOf('!');
       var newPath = path.substring(0,pos);
       path = newPath
       $location.path(newPath);
-    }
-    if(path == "" || path=='/'){
+    }*/
+    if(path == "" || path=='/' || path.indexOf('about') > -1){
       path ='about';
     }
     if(path.indexOf('store') > -1){
       path = 'store';
+    }
+    if(path.indexOf('locations') > -1){
+      path = 'locations';
+    }
+    if(path.indexOf('contact') > -1){
+      path = 'contact';
     }
     var id = "#link_" + path;
     $(".nav").find(".active").removeClass("active");
     $(".nav").find(id).addClass("active");
   }
 }]);
+
+Snipcart.subscribe('cart.opened', function() {
+    console.log('Snipcart popup is visible');
+});
+Snipcart.subscribe('cart.closed', function() {
+    console.log('Snipcart popup has been closed');
+});
