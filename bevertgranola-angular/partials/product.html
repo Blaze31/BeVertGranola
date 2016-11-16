@@ -13,26 +13,28 @@ Test card declined
                 <img ng-src="{{selectedProduct.img}}"/>
                 <div style="float:right">
                     <div>
-                        <span>{{selectedProduct.title}}</span>
+                        <span class="text_bold">{{selectedProduct.title}}</span>
                     </div>
                     <div>
-                        <span>{{selectedProduct.price}}</span>
+                        <span class="text_bold">{{selectedProduct.price}}$</span>
                     </div>
                     <div>
-                        <span>QNT.</span>
+                        <span class="text_bold">QNT.</span>
                     </div>
                     <div>
-                        <input style="border:1px solid"/>
+                        <input value="1" style="border:1px solid;text-align:center; max-width:50px"/>
                     </div>
                     <div>
                         <button
                             class="snipcart-add-item"
                             data-item-id="{{selectedProduct.id}}"
                             data-item-name="{{selectedProduct.title}}"
-                            data-item-price="{{selectedProduct.price}} "
+                            data-item-price="{{selectedProduct.price}}"
                             data-item-weight="{{selectedProduct.weight}}"
                             data-item-url="{{selectedProduct.url}}"
-                            data-item-description="{{selectedProduct.description}}">
+                            data-item-description="{{selectedProduct.description}}"
+                            data-item-taxable="true"
+                            data-item-taxes="TPS|TVQ">
                             Ajouter au panier
                         </button>
                     </div>
@@ -46,11 +48,14 @@ Test card declined
                         and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment<br/>
                         by using an organic product. A step toward a green planet</span>
                     </div>
-                    <div>
-                        <span>Ingrédients</span>
+                    <div >
+                        <span class="text_bold" style="font-variant: small-caps;">INGRÉDIENTS</span>
                     </div>
-                    <div>
-                        <span>Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio. </span>
+                    <div >
+                        <span class="text">Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio. </span>
+                    </div>
+                    <div >
+                        <span class="text_bold" style="font-variant: small-caps;">INFORMATIONS NUTRITIONNELLES</span>
                     </div>
                     <div>
                         <img src="{{selectedProduct.ing}}"/>

@@ -23,7 +23,7 @@ nav{
     margin: 0px!important;
     margin-top:50%; 
 }
-nav a{
+.menu-item{
     color: #212851!important;
     font-size: 12pt;
     font-variant: small-caps;
@@ -43,11 +43,28 @@ nav li .active{
 nav a:hover{
     font-family: robotoslab_bold!important;
 }
+.navbar{
+    position: relative;
+    height: 100px;
+}
+.navbar-brand{
+    font-family: chasingambers_one!important;
+    color: #212851!important;
+    position: absolute;
+    left:45%;
+    margin-left: -50px !important;
+    display: block;
+    height: 100px
+}
+.header-cart{
+    position: absolute;
+    left:90%;
+    margin-left: -50px !important;
+    display: block;
+    height: 100px;
+}
 div .col-md-12{
     padding: 0px;
-}
-.brand_logo{
-    height: 75px;
 }
 .section_title{
     color:  #212851;
@@ -95,7 +112,7 @@ button{
     padding-left: 30px;
     padding-right: 30px;
 }
-/*@media (max-width: 1300px) {
+@media (max-width: 768px) {
     .navbar-header {
         float: none;
     }
@@ -104,6 +121,13 @@ button{
     }
     .navbar-toggle {
         display: block;
+    }
+    .header-cart{
+        position: absolute;
+        left:10%;
+        margin-left: -50px !important;
+        display: block;
+        height: 100px;
     }
     .navbar-collapse {
         border-top: 1px solid transparent;
@@ -140,4 +164,4 @@ button{
        -webkit-box-shadow: none;
        box-shadow: none;
     }
-}*/
+}

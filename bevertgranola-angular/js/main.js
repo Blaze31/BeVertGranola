@@ -1,37 +1,48 @@
 var app = angular.module('beVertGranolaApp', [
-  'ngRoute',
+  'ui.router',
   'ui.bootstrap'
 ])
 .factory('productService', function ($http, $q) {
-        var selectedProduct = '';
-        var productsList = [];
-
-        function init(){
-          $http.get('../products.json').then(function(response){
-            productsList = response.data;
+        var productsLists = [];
+        var selectedProduct = {};
+        var products = $http.get('../products.json').then(function(response){
+            productsLists = response.data;
+            console.log(productsLists);
+            return response.data;
           });
-        }
+
         return {
-            initProductService: function(){
-              init();
-            },
-            getSelectedProduct: function () {
-                return selectedProduct;
-            },
-            setSelectedProduct: function(value) {
-                selectedProduct = value;
-            },
-            getProductsList: function(){
-              return productsList;
-            },
-            getProductId: function(id){
-              var elementPos = productsList.map(function(x){return x.id;}).indexOf(id);
-              return productsList[elementPos];
-            }
+          query: function(){
+            return products;
+          },
+          getProductsList: function(){
+            return productsLists
+          },
+          getSelectedProduct: function () {
+              return selectedProduct;
+          },
+          setSelectedProduct: function(value) {
+              selectedProduct = value;
+          },
+          getProductId: function(id){
+             var indexes = $.map(productsLists, function(obj, index) {
+                if(obj.id == id) {
+                    return index;
+                }
+            });
+            return productsLists[indexes];
+            /*angular.forEach(productsLists, function(item){
+              if(id == item.id){
+                $q.resolve(item);
+                return;
+              }
+            });
+            return $q.promise;*/
+          }
         };
 });
 
-app.config(['$locationProvider','$routeProvider', function ($locationProvider,$routeProvider,productService) {
+/*app.config(['$locationProvider','$routeProvider', function ($locationProvider,$routeProvider,productService) {
   $locationProvider.hashPrefix('').html5Mode(true);
   $routeProvider
     // Home
@@ -45,9 +56,57 @@ app.config(['$locationProvider','$routeProvider', function ($locationProvider,$r
     .when("/store/:id", {templateUrl: "partials/product.html", controller: "PageCtrl", resolve: {products:function(productService){return productService.initProductService(); }}})
     // else 404
     //.otherwise("/", {templateUrl: "partials/about.html", controller: "PageCtrl"});
-}]);
+}]);*/
+app.config(function($stateProvider,$urlRouterProvider,$locationProvider){
+  $urlRouterProvider.rule(function ($injector, $location) {
+    var path = $location.path();
+    var match = path.match(/(.*)!\/{0,1}$/);
 
-app.controller('PageCtrl', ['$scope','$location','$http','productService', function ( $scope, $location, $http, productService) {
+    if (match) {
+      return match[1];
+    }
+  });
+  $urlRouterProvider.when('', '/about');
+  $stateProvider
+    .state('about', {
+      url:'/about',
+      templateUrl: '../partials/about.html',
+      controller: 'PageCtrl'
+    })
+    .state('store', {
+      url:'/store',
+      templateUrl: '../partials/store.html',
+      controller: 'storeCtrl',
+      resolve: {
+        products: function($q, productService){
+          var def = $q.defer();
+          productService.query().then(function(data){
+            def.resolve(data);
+          });
+          return def.promise;
+        }
+      }
+    })
+    .state('product', {
+      url:'/store/:id',
+      templateUrl: '../partials/product.html',
+      controller: 'productCtrl',
+      resolve: {
+        products: function($q, productService){
+          var def = $q.defer();
+          productService.query().then(function(data){
+            def.resolve(data);
+          });
+          return def.promise;
+        }
+      }
+    });
+
+});
+app.run(function($rootScope) {
+  $rootScope.$on("$stateChangeError", console.log.bind(console));
+});
+app.controller('PageCtrl', ['$scope','$location', function ( $scope, $location) {
   var path = $location.path();
   setActiveLink(path.replace("/",""),$location);
 
@@ -82,3 +141,4 @@ Snipcart.subscribe('cart.opened', function() {
 Snipcart.subscribe('cart.closed', function() {
     console.log('Snipcart popup has been closed');
 });
+Snipcart.api.cart.currency('cad');

@@ -14,3 +14,10 @@ app.directive('header', function(){
         }]
     }
 });
+
+app.controller('headerCtrl', function($scope,$location){
+    $scope.redirectHome = function(){
+        $location.path('/about');
+        console.log($location.path());
+    }
+})

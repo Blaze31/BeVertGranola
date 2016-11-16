@@ -1,47 +1,35 @@
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-5">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="nav_bar">
-                    <ul class="nav navbar-nav navbar-left" >
-                        <li><a id="link_about" class="menu-item" href="/about">À PROPOS</a></li>
-                        <!--<li><a id="link_location" class="menu-item" href="/locations">POINT DE VENTE</a></li>
-                        <li><a id="link_contact" class="menu-item" href="/contact">CONTACT</a></li>-->
-                        <li><a id="link_store" class="menu-item" href="/store">BOUTIQUE</a></li>
-                    </ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div ng-controller="headerCtrl">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a ui-sref="about">
+            <img class="navbar-brand brand_logo" src="../images/bevert_logo-05.svg"/>
+        </a>
+        <div class="header-cart">
+                <div>
+                    <a href="" class="snipcart-checkout menu-item">Checkout / Payer</a>
                 </div>
-            </div>
-            <div class="col-md-5">
-                <!-- /.navbar-collapse -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_bar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <img class="brand_logo" src="../images/bevert_logo-05.svg"/>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div style="float:right">
-                    <a href="" class="snipcart-checkout">Checkout / Payer</a>
-                    <!--<div class="snipcart-summary">
-                        <a href="#" class="snipcart-user-email snipcart-user-profile">
-                            Customer dashboard
-                        <a>
-                    </div>
-                    <div>
-                        Lots of content
-                    </div>
-                    <div class="snipcart-summary">
-                        Number of items: <span class="snipcart-total-items"></span>
-                        Total price: <span class="snipcart-total-price"></span>
-                    </div>-->
+                <div class="text snipcart-summary">
+                    Item (s): <span class="snipcart-total-items"></span>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.container -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a id="link_about" class="menu-item" ui-sref="about">À PROPOS</a></li>
+            <!--<li><a id="link_location" class="menu-item" href="/locations">POINT DE VENTE</a></li>
+            <li><a id="link_contact" class="menu-item" href="/contact">CONTACT</a></li>-->
+            <li><a id="link_store" class="menu-item" ui-sref="store">BOUTIQUE</a></li>
+        </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+  </div><!-- /.container-fluid -->
 </nav>
