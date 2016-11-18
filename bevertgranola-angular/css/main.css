@@ -18,6 +18,7 @@ src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix);
 }
 body{
     font-size: 11pt;
+    padding-top: 80px;
 }
 div .col-md-12{
     padding: 0px;

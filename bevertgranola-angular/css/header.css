@@ -1,5 +1,6 @@
 
 nav{
+    margin-bottom:1000px!important;
 }
 .navbar-fixed-top {
     min-height: 80px;
@@ -28,8 +29,8 @@ nav a:hover{
     margin-top:30%;
 }
 .navbar{
-    position: relative;
-    /*height: 100px;*/
+    /*position: relative;
+    height: 100px;*/
 }
 .navbar-brand{
     font-family: chasingambers_one!important;
