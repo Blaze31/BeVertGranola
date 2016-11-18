@@ -37,6 +37,14 @@ input{
 table{
     margin: 22px;
 }
-@media (max-width: 990px) {
-   
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+@media (max-width: 795px) {
+   .section_nous{
+    background-image:none;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
 }

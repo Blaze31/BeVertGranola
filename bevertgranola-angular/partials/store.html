@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="css/store.css">
 <div class="container-fluid">
     <div ng-controller="storeCtrl">
         <div class="product_table">
@@ -7,7 +6,7 @@
                     <tr style="float:left" ng-repeat="product in products track by product.id">
                         <td style="text-align:center" ng-click="selectproduct(product.id)">
                             <div>
-                                <input type="image" ng-src="{{product.img}}">
+                                <input class="poduct_image" type="image" ng-src="{{product.img}}">
                             </div>
                             <div>
                                 <span class="text_bold">{{product.title}}</span>

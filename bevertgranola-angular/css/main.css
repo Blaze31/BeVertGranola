@@ -19,50 +19,6 @@ src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix);
 body{
     font-size: 11pt;
 }
-nav{
-    margin: 0px!important;
-    margin-top:50%; 
-}
-.menu-item{
-    color: #212851!important;
-    font-size: 12pt;
-    font-variant: small-caps;
-    font-family: robotoslab_regular!important;
-    margin: 10px;
-    padding: 0px!important;
-    width: fit-content;
-}
-nav a .active{
-    font-family: robotoslab_bold!important;
-    border-bottom: 5px solid #212851!important;
-}
-nav li .active{
-    font-family: robotoslab_bold!important;
-    border-bottom: 5px solid #212851!important;
-}
-nav a:hover{
-    font-family: robotoslab_bold!important;
-}
-.navbar{
-    position: relative;
-    height: 100px;
-}
-.navbar-brand{
-    font-family: chasingambers_one!important;
-    color: #212851!important;
-    position: absolute;
-    left:45%;
-    margin-left: -50px !important;
-    display: block;
-    height: 100px
-}
-.header-cart{
-    position: absolute;
-    left:90%;
-    margin-left: -50px !important;
-    display: block;
-    height: 100px;
-}
 div .col-md-12{
     padding: 0px;
 }
@@ -111,57 +67,4 @@ button{
     padding-bottom: 5px;
     padding-left: 30px;
     padding-right: 30px;
-}
-@media (max-width: 768px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .header-cart{
-        position: absolute;
-        left:10%;
-        margin-left: -50px !important;
-        display: block;
-        height: 100px;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in{
-        display:block !important;
-    }
-   .navbar-nav .open .dropdown-menu {
-       position: static;
-       float: none;
-       width: auto;
-       margin-top: 0;
-       background-color: transparent;
-       border: 0;
-       -webkit-box-shadow: none;
-       box-shadow: none;
-    }
 }

@@ -1,6 +1,12 @@
 table{
 }
-img{
+.poduct_image{
+    height: 400px;
+    width: 400px;
+}
+.poduct_detail_image{
+    height: 400px;
+    width: 400px;
 }
 tr{
 }
