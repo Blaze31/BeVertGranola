@@ -4,19 +4,23 @@
         "price": "12.00",
         "url": "/products.json", 
         "img": "../images/sac_02.jpg",
-        "ing": "../images/vn_01.jpg", 
+        "ingimgae": "../images/vn_01.jpg", 
         "title": "Amandes & coco", 
         "weight": 300,
-        "description": "Amandes & coco"
+        "descriptionF": "Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties rehaussé de noix de coco, infusé dans un beurre au parfum de vanille. Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.",
+        "descriptionA": "Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green planet",
+        "ingredients": "Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio."
     },
     {
         "id": 2,
         "price": "12.00",
         "url": "/products.json",
         "img": "../images/sac_03.jpg",
-        "ing": "../images/vn_02.jpg", 
+        "ingimgae": "../images/vn_02.jpg", 
         "title": "Érables & pacanes",
         "weight": 300,
-        "description": "Érables & pacanes"
+        "descriptionF": "Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties rehaussé de noix de coco, infusé dans un beurre au parfum de vanille. Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.",
+        "descriptionA": "Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green planet",
+        "ingredients": "Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio."
         }
 ]

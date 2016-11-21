@@ -6,24 +6,30 @@ Test card number authorized
 Test card declined
 4000000000000002
 -->
+<link rel="stylesheet" href="../css/product.css">
 <div class="container-fluid">
     <div ng-controller="productCtrl">
-        <div style="">
-            <div >
+        <div class="row">
+            <div class="col-md-6">
                 <input class="poduct_detail_image" type="image" ng-src="{{selectedProduct.img}}"/>
+            </div>
+            <div class="col-md-6">
                 <div style="float:right">
                     <div>
                         <span class="text_bold">{{selectedProduct.title}}</span>
                     </div>
+                    <br>
                     <div>
                         <span class="text_bold">{{selectedProduct.price}}$</span>
                     </div>
+                    <br>
                     <div>
                         <span class="text_bold">QNT.</span>
                     </div>
                     <div>
-                        <input value="1" style="border:1px solid;text-align:center; max-width:50px"/>
+                        <input class="text" style="border:1px solid;text-align:center; max-width:50px" data-ng-model="quantity"/>
                     </div>
+                    <br>
                     <div>
                         <button
                             class="snipcart-add-item"
@@ -35,31 +41,32 @@ Test card declined
                             data-item-description="{{selectedProduct.description}}"
                             data-item-taxable="true"
                             data-item-taxes="TPS|TVQ"
-                            ng-click="redirectToStore()">
+                            data-item-quantity="{{quantity}}"
+                            ng-click="toggleModal()">
                             Ajouter au panier
                         </button>
                     </div>
+                    <br>
                     <div>
-                        <span class="text">Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties<br/>
-                        rehaussé de noix de coco, infusé dans un beurre au parfum de vanille.<br/>
-                        Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.</span>
+                        <span class="text">{{selectedProduct.descriptionF}}</span>
                     </div>
+                    <br>
                     <div>
-                        <span class="text">Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel<br/> 
-                        and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment<br/>
-                        by using an organic product. A step toward a green planet</span>
+                        <span class="text">{{selectedProduct.descriptionA}}</span>
                     </div>
+                    <br>
                     <div >
                         <span class="text_bold" style="font-variant: small-caps;">INGRÉDIENTS</span>
                     </div>
                     <div >
-                        <span class="text">Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio. </span>
+                        <span class="text">{{selectedProduct.ingredients}} </span>
                     </div>
+                    <br>
                     <div >
                         <span class="text_bold" style="font-variant: small-caps;">INFORMATIONS NUTRITIONNELLES</span>
                     </div>
                     <div>
-                        <img src="{{selectedProduct.ing}}"/>
+                        <img src="{{selectedProduct.ingimgae}}"/>
                     </div>
                 </div>
             </div>
@@ -67,3 +74,25 @@ Test card declined
         </div>
     </div>
 </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-6">
+                    <button ng-click="redirectToStore()"> Magasin / Store </button>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="text snipcart-summary">
+                        <a href="" class="snipcart-checkout menu-item">
+                            <button data-dismiss="modal"> Payer / Checkout </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

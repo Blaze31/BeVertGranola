@@ -28,10 +28,6 @@ nav a:hover{
 .navbar-nav li a {
     margin-top:30%;
 }
-.navbar{
-    /*position: relative;
-    height: 100px;*/
-}
 .navbar-brand{
     font-family: chasingambers_one!important;
     color: #212851!important;
@@ -39,7 +35,7 @@ nav a:hover{
     left:45%;
     margin-left: -50px !important;
     display: block;
-    height: 72pt;
+    height: 72px;
 }
 .header-cart{
     float: right;

@@ -4,7 +4,7 @@ app.controller('carouselCtrl',['$scope', function ($scope) {
   $scope.active = 0;
   var slides = $scope.slides = [];
   var currIndex = 0;
-  var images = ['../images/diapo_01.jpg','../images/diapo_02.jpg','../images/diapo_03.jpg'];
+  var images = ['../images/diapo_04.jpg','../images/diapo_05.jpg','../images/diapo_06.jpg'];
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
     slides.push({

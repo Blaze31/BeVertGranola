@@ -4,8 +4,8 @@
 }
 .content{
     text-align: center;
-    padding-left: 20%;
-    padding-right: 24%;
+    padding-left: 19%;
+    padding-right: 24%; 
     font-size: 12pt;
     font-family: robotoslab_regular;
     height: 100%;
@@ -19,7 +19,7 @@
     background-size: auto 100%;
 }
 .section_content{
-    padding-left: 66px;
+    padding-left: 8.53%;
 }
 input{
     text-align: center;
@@ -37,14 +37,34 @@ input{
 table{
     margin: 22px;
 }
+.contact_section{
+    margin-top: 30px; 
+}
+.subscription_section{
+    width: fit-content;
+}
+.social_section{
+    width: fit-content;
+    margin-left:10px;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+
+}
 .carousel-control.left, .carousel-control.right {
     background-image: none
 }
-@media (max-width: 795px) {
-   .section_nous{
-    background-image:none;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
 }
+@media (max-width: 768px) {
+   .section_nous{
+        background-image:none;
+    }
+    .social_section{
+        width: fit-content;
+        margin-left:10px;
+        margin-top: 30px;
+        margin-bottom: 30px; 
+    }
 }

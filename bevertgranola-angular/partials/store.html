@@ -1,23 +1,21 @@
+<link rel="stylesheet" href="../css/store.css">
 <div class="container-fluid">
-    <div ng-controller="storeCtrl">
         <div class="product_table">
-            <div>
-                <table>
-                    <tr style="float:left" ng-repeat="product in products track by product.id">
-                        <td style="text-align:center" ng-click="selectproduct(product.id)">
-                            <div>
-                                <input class="poduct_image" type="image" ng-src="{{product.img}}">
-                            </div>
-                            <div>
-                                <span class="text_bold">{{product.title}}</span>
-                            </div>
-                            <div>
-                                <span class="text">{{product.price}} $</span>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            <table>
+                <tr style="float:left" ng-repeat="product in products track by product.id">
+                    <td style="text-align:center" ng-click="selectproduct(product.id)">
+                        <div>
+                            <input class="poduct_image" type="image" ng-src="{{product.img}}">
+                        </div>
+                        <div>
+                            <span class="text_bold">{{product.title}}</span>
+                        </div>
+                        <div>
+                            <span class="text">{{product.price}} $</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     <!-- /.container -->
