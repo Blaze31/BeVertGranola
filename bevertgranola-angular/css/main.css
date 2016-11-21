@@ -17,7 +17,7 @@ src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.ttf); /* TTF file for CSS3 b
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix); 
 }
 body{
-    max-width: 1370px
+    min-width: 550px;
     font-size: 11pt;
     padding-top: 85px;
     padding-right: 0px;
