@@ -3,3 +3,9 @@
     height: 400px;
     width: 400px;
 }
+@media (max-width: 768px) {
+   .poduct_detail_image{
+       float: left;
+       margin-left:25%;
+    }
+}
