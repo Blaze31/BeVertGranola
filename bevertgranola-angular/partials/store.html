@@ -1,9 +1,17 @@
 <link rel="stylesheet" href="../css/store.css">
 <div class="container-fluid">
-        <div class="product_table">
-            <table>
-                <tr style="float:left" ng-repeat="product in products track by product.id">
-                    <td style="text-align:center" ng-click="selectproduct(product.id)">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="banner_section">
+                <img class="store_banner" src="../images/boutique_03.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="product_section">
+            <div ng-repeat="product in products track by product.id" ng-click="selectproduct(product.id)">
+                <div class="col-sm-4 col-md-4">
+                    <div class="product">
                         <div>
                             <input class="poduct_image" type="image" ng-src="{{product.img}}">
                         </div>
@@ -13,10 +21,10 @@
                         <div>
                             <span class="text">{{product.price}} $</span>
                         </div>
-                    </td>
-                </tr>
-            </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- /.container -->
 </div>
+    <!-- /.container -->

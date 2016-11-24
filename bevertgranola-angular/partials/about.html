@@ -5,7 +5,7 @@
     <div ng-controller="carouselCtrl">
         <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
             <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                <img ng-src="{{slide.image}}" style="margin:0 auto;max-width: 100%;min-height: 350px;height: auto;width: auto\9; /* ie8 */">
+                <img ng-src="{{slide.image}}" style="margin:0 auto;max-width: 100%;\9; /* ie8 */">
                 <div class="carousel-caption">
                 </div>
             </div>
@@ -19,14 +19,14 @@
             </div>
             <div class="section_content">
                 <div class="row">
-                    <span class="text">Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties<br/>
-                    rehaussé de noix de coco, infusé dans un beurre au parfum de vanille.<br/>
+                    <span class="text">Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties
+                    rehaussé de noix de coco, infusé dans un beurre au parfum de vanille.
                     Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.</span>
                 </div>
                 <br>
                 <div class="row">
-                    <span class="text">Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel<br/> 
-                    and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment<br/>
+                    <span class="text">Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel
+                    and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment
                     by using an organic product. A step toward a green planet</span>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                     <div class="col-md-4" >
                         <div class="subscription_section vcenter">
                             <span class="sub_title" style="font-variant: small-caps;overflow: hidden;white-space: nowrap;">gardons contact | stay in touch</span><br/>
-                            <input placeholder=" votre adresse | your email"/><br/>
+                            <input class="email_input" placeholder=" votre adresse | your email"/><br/>
                             <button>S'ABONNER</button>
                         </div>
                     </div>

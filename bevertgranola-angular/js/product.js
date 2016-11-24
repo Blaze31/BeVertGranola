@@ -12,6 +12,6 @@ app.controller('productCtrl',['$scope','$location','productService', function ($
         $('.modal-backdrop').remove();
     }
     $scope.toggleModal = function(){
-        $('#myModal').modal('toggle');
+        $('#checkoutModal').modal('toggle');
     }
 }]);

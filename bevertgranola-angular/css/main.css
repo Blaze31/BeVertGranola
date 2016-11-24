@@ -17,8 +17,7 @@ src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.ttf); /* TTF file for CSS3 b
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix); 
 }
 body{
-    min-width: 550px;
-    font-size: 11pt;
+    font-size: 10pt;
     padding-top: 85px;
     padding-right: 0px;
 }
@@ -39,7 +38,6 @@ div .col-md-12{
 }
 .text_invert{
     color: white!important;
-    font-size: 11pt;
     font-family: robotoslab_regular!important;
 }
 .sub_title{
@@ -47,13 +45,11 @@ div .col-md-12{
 }
 .text{
     color: #212851!important;
-    font-size: 11pt;
     font-family: robotoslab_regular!important;
     text-align: center;
 }
 .text_bold{
     color: #212851!important;
-    font-size: 11pt;
     font-family: robotoslab_bold!important;
     text-align: center;
 }
@@ -65,9 +61,25 @@ button{
     border: none;
     color: white;
     font-family: robotoslab_bold!important;
+    font-variant: small-caps;
     font-size: 16px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 30px;
     padding-right: 30px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+}
+@media (max-width: 768px) {
+   .section_nous{
+        background-image:none;
+    }
+    .section_title{
+        float: none;
+    }
+    .section_title_invert{
+        float: none;
+    }
 }

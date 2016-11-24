@@ -1,11 +1,27 @@
 .poduct_image{
-    height: 200px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
+    margin-right:45px; 
 }
 td{
-    padding: 22px;
+    margin: 22px;
 }
-.product_table{
-    margin-left: 20%;
-    margin-top: 5%;
+.store_banner{
+    width: 100%;
+}
+.banner_section{
+    margin-right:10%;
+    margin-left:10%;
+}
+.product_section{
+    display: inline-block;
+    margin-right:10%;
+    margin-left:10%;
+    margin-top:45px; 
+}
+.product{
+    text-align:center;
+}
+.table_row{
+    width: fit-content;
 }

@@ -8,8 +8,9 @@
         "title": "Amandes & coco", 
         "weight": 300,
         "descriptionF": "Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties rehaussé de noix de coco, infusé dans un beurre au parfum de vanille. Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.",
-        "descriptionA": "Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green planet",
-        "ingredients": "Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio."
+        "descriptionA": "Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green planet.",
+        "ingredientsF": "Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio.",
+        "ingredientsA": "organic oat, organic coconut, organic cane sugar, organic butter, water, organic almond, organic vanilla extract."
     },
     {
         "id": 2,
@@ -19,8 +20,9 @@
         "ingimgae": "../images/vn_02.jpg", 
         "title": "Érables & pacanes",
         "weight": 300,
-        "descriptionF": "Be Vert Granola réveillera vos matins comme un rayon de soleil d’été par ses notes de caramel et d’amandes rôties rehaussé de noix de coco, infusé dans un beurre au parfum de vanille. Respectez l’environnement en savourant ce produit biologique. Un autre pas vert une planète verte.",
-        "descriptionA": "Be Vert Granola will wake up your morning like a ray of sunshine on bright summer day, with its notes of caramel and roasted almonds sublimed with coconut , infused in a perfume of vanilla butter. Respect for the environment by using an organic product. A step toward a green planet",
-        "ingredients": "Avoine bio, noix de coco bio, sucre de canne bio, beurre bio, eau, amandes bio et extrait de vanille bio."
+        "descriptionF": "Savourez les parfums boisés de pacanes caramélisées au sirop d’érable et de sel de mer gris. Laissez-vous inspirer par les notes automnales de graines de tournesols et de citrouilles croquantes.  Be Vert Granola N°2, Érable et pacanes vous proposent une saveur folklorique aux arômes naturels du terroir québécois.",
+        "descriptionA": "Savor the scent, much alike a walk through the woods, of our maple caramelized pecans with grey sea salt. Behold the hints of fall through the crispy pumpkin seeds. Be Vert Granola N°2, Maple and pecan offers you a flavor that reflects tradition and of natural aromas from Quebec's flora.",
+        "ingredientsF": "Avoine bio, sirop d’érable bio, graine de tournesol bio, graine de citrouille bio, pacanes bio, sucre de canne bio, beurre bio, noix de coco bio, sel de mer.Peut contenir des arachides, noix, sésame, lait, soja, blé, moutarde.",
+        "ingredientsA": "Organic oat, organic maple syrup, organic sunflower seed, organic pumkin seed, organic pecan, organic cane sugar, organic butter, organic coco,  sea salt. May contain peanut, nuts, sesame, milk, soya, wheat, mustard."
         }
 ]

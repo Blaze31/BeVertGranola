@@ -3,9 +3,39 @@
     height: 400px;
     width: 400px;
 }
+.modal-dialog{
+    margin-top:25%;
+}
+.checkoutBtn{
+    width: 200.25px;
+}
+.link{
+    margin: 0px!important;
+}
+#btnContinue{
+    float:left;
+    margin:5px; 
+}
+#btnCheckout{
+    float:right;
+    margin:5px;
+}
 @media (max-width: 768px) {
    .poduct_detail_image{
        float: left;
-       margin-left:25%;
     }
+}
+@media (max-width: 480px) {
+    .checkoutBtn{
+        display: inline-block;
+        vertical-align: middle;
+    }
+   #btnCheckout{
+       float:left;
+       margin-top:10px;
+   }
+   .modal-content{
+       width: fit-content;
+       margin-left:15%;
+   }
 }

@@ -59,12 +59,12 @@ Test card declined
                         <span class="text_bold" style="font-variant: small-caps;">INGRÉDIENTS</span>
                     </div>
                     <div >
-                        <span class="text">{{selectedProduct.ingredients}} </span>
+                        <span class="text">{{selectedProduct.ingredientsF}} </span>
+                        <br>
+                        <br>
+                        <span class="text">{{selectedProduct.ingredientsA}} </span>
                     </div>
                     <br>
-                    <div >
-                        <span class="text_bold" style="font-variant: small-caps;">INFORMATIONS NUTRITIONNELLES</span>
-                    </div>
                     <div>
                         <img src="{{selectedProduct.ingimgae}}"/>
                     </div>
@@ -74,21 +74,19 @@ Test card declined
         </div>
     </div>
 </div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+<div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
           <div class="container-fluid">
               <div class="row">
-                  <div class="col-md-6">
-                    <button ng-click="redirectToStore()"> Magasin / Store </button>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="text snipcart-summary">
-                        <a href="" class="snipcart-checkout menu-item">
-                            <button data-dismiss="modal"> Payer / Checkout </button>
-                        </a>
-                    </div>
+                <div>
+                    <button class="checkoutBtn" id="btnContinue" ng-click="redirectToStore()"> Magasin / Store </button>
+                </div>
+                <div class="text snipcart-summary" id="btnCheckout">
+                    <a href="" class="snipcart-checkout menu-item link">
+                        <button class="checkoutBtn" data-dismiss="modal"> Payer / Checkout </button>
+                    </a>
                 </div>
             </div>
         </div>
