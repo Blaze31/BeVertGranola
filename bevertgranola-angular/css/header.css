@@ -67,7 +67,7 @@ nav a:hover{
     }
     .header-cart{
         position: absolute;
-        left:10%;
+        left:15%;
         top:10%;
         margin-left: -50px !important;
         display: block;

@@ -40,22 +40,20 @@ table{
     margin-top: 30px; 
 }
 .subscription_section{
-    width: fit-content;
 }
 .social_section{
     display: inline-block;
-    /*width: fit-content;*/
     min-width: 148px;
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
 .carousel-control.left, .carousel-control.right {
     background-image: none
 }
-.email_input{
-}
-@media (max-width: 768px) {
+@media (max-width: 490px) {
+    .subscription_section{
+        margin-left:-15%!important;
+    }
 }
 @media (min-width: 1400px) {
    .section_nous{
