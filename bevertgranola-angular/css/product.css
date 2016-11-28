@@ -1,7 +1,13 @@
 .poduct_detail_image{
     float: right;
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
+}
+.poduct_detail_image_list{
+    padding-left:10%;
+    margin-bottom: 5px; 
+    height: 100%;
+    width: 100%;
 }
 .modal-dialog{
     margin-top:25%;
@@ -24,6 +30,9 @@
    .poduct_detail_image{
        float: left;
     }
+    #image_detail_section{
+        display: none;
+    }
 }
 @media (max-width: 480px) {
     .checkoutBtn{
@@ -37,5 +46,7 @@
    .modal-content{
        width: fit-content;
        margin-left:15%;
+       width:10%;
+       height: 10%;
    }
 }
