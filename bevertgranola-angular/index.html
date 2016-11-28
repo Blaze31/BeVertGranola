@@ -34,8 +34,11 @@
     <![endif]-->
 
     <!-- Our Website Content Goes Here -->
-    <header></header>
-    <div ui-view></div>
+    <div class="content_wraper">
+        <header></header>
+        <div class="content_view" ui-view></div>
+        <footer></footer>
+    </div>
     
     <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
     <script>
@@ -69,6 +72,7 @@
     <script src="js/main.js"></script>
     <script src="js/about.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/store.js"></script>
     <script src="js/product.js"></script>
     </body>

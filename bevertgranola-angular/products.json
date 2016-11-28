@@ -24,5 +24,18 @@
         "descriptionA": "Savor the scent, much alike a walk through the woods, of our maple caramelized pecans with grey sea salt. Behold the hints of fall through the crispy pumpkin seeds. Be Vert Granola N°2, Maple and pecan offers you a flavor that reflects tradition and of natural aromas from Quebec's flora.",
         "ingredientsF": "Avoine bio, sirop d’érable bio, graine de tournesol bio, graine de citrouille bio, pacanes bio, sucre de canne bio, beurre bio, noix de coco bio, sel de mer.Peut contenir des arachides, noix, sésame, lait, soja, blé, moutarde.",
         "ingredientsA": "Organic oat, organic maple syrup, organic sunflower seed, organic pumkin seed, organic pecan, organic cane sugar, organic butter, organic coco,  sea salt. May contain peanut, nuts, sesame, milk, soya, wheat, mustard."
-        }
+    },
+    {
+        "id": 3,
+        "price": "30.00",
+        "url": "/products.json",
+        "img": "../images/boite_012.jpg",
+        "ingimgae": "", 
+        "title": "Ensemble cadeau",
+        "weight": 800,
+        "descriptionF": "Les matins  qui vous réchauffent.  Offrez ce cadeau pour encourager la relaxation du dimanche matin ou pour les jours d’hiver.  Relaxer et laisser le reste pour plus tard. Cette boîte cadeau comprend deux granolas biologiques de Be Vert Granola (Érable & pacanes et Amandes & coco), une magnifique tasse/bol en grès de la potière Fréférique Bonmatin, et un thé noir de Camellia Sinensis.",
+        "descriptionA": "The early morning that warm you up. Give the gift  for Sunday morning that can be enjoyed any time or cold winter mornings.  Relax and leave the rest for later kind of morning.  This gift box included two organic granolas from Be Vert Granola (Maple & pecans, Almonds & coco), a beautiful ceramic  cup/bowl  from the potter Frédérique Bonmatin and a black tea from Camellia Sinensis.",
+        "ingredientsF": "",
+        "ingredientsA": ""
+    }
 ]

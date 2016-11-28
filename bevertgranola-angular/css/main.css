@@ -16,11 +16,19 @@ font-family:chasingambers_two;
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.ttf); /* TTF file for CSS3 browsers */
 src: url(../fonts/Chasing_Embers/Chasing_Embers_Two.otf?#iefix); 
 }
+html{
+  position:relative; 
+  height: 100%;
+  box-sizing: border-box;
+}
 body{
     min-width:350px;
-    font-size: 10pt;
     padding-top: 85px;
-    padding-right: 0px;
+    font-size: 10pt;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
 }
 div .col-md-12{
     padding: 0px;
@@ -72,6 +80,16 @@ button{
 .vcenter {
     display: inline-block;
     vertical-align: middle;
+}
+.content_view{
+    height: 100%;
+}
+footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
 }
 @media (max-width: 768px) {
    .section_nous{
