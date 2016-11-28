@@ -1,11 +1,14 @@
 .poduct_detail_image{
-    float: right;
     height: 100%;
     width: 100%;
 }
 .poduct_detail_image_list{
     padding-left:10%;
     margin-bottom: 5px; 
+    height: 100%;
+    width: 100%;
+}
+.image_tumbtail{
     height: 100%;
     width: 100%;
 }

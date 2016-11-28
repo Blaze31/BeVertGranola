@@ -10,12 +10,14 @@ Test card declined
 <div class="container-fluid">
     <div ng-controller="productCtrl">
         <div class="row">
-            <div class="col-sm-2 col-md-2">
+            <div class="col-sm-1 col-md-1">
                 <div id="image_detail_section" ng-show="listImageDetails.length > 0">
-                        <input class="poduct_detail_image_list" ng-repeat="imageSource in listImageDetails track by imageSource.id" type="image" ng-src="{{imageSource.src}}" ng-click="setDisplayImage(imageSource)"/>
+                    <div class="image_tumbtail" ng-repeat="imageSource in listImageDetails track by imageSource.id">
+                        <input class="poduct_detail_image_list" type="image" ng-src="{{imageSource.src}}" ng-click="setDisplayImage(imageSource)"/>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4 col-md-4">
+            <div class="col-sm-5 col-md-5">
                 <input class="poduct_detail_image" type="image" ng-src="{{displayProductImage}}"/>
             </div>
             <div class="col-sm-6 col-md-6">
