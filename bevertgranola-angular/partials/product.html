@@ -9,75 +9,77 @@ Test card declined
 <link rel="stylesheet" href="../css/product.css">
 <div class="container-fluid">
     <div ng-controller="productCtrl">
-        <div class="row">
-            <div class="col-sm-1 col-md-1">
-                <div id="image_detail_section" ng-show="listImageDetails.length > 0">
-                    <div class="image_tumbtail" ng-repeat="imageSource in listImageDetails track by imageSource.id">
-                        <input class="poduct_detail_image_list" type="image" ng-src="{{imageSource.src}}" ng-click="setDisplayImage(imageSource)"/>
+        <div class="product_page">
+            <div class="row">
+                <div class="col-sm-1 col-md-1">
+                    <div id="image_detail_section" ng-show="listImageDetails.length > 0">
+                        <div class="image_tumbtail" ng-repeat="imageSource in listImageDetails track by imageSource.id">
+                            <input class="poduct_detail_image_list" type="image" ng-src="{{imageSource.src}}" ng-click="setDisplayImage(imageSource)"/>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-5 col-md-5">
-                <input class="poduct_detail_image" type="image" ng-src="{{displayProductImage}}"/>
-            </div>
-            <div class="col-sm-6 col-md-6">
-                <div style="float:right">
-                    <div>
-                        <span class="text_bold">{{selectedProduct.title}}</span>
-                    </div>
-                    <br>
-                    <div>
-                        <span class="text_bold">{{selectedProduct.price}}$</span>
-                    </div>
-                    <br>
-                    <div>
-                        <span class="text_bold">QNT.</span>
-                    </div>
-                    <div>
-                        <input class="text" style="border:1px solid;text-align:center; max-width:50px" data-ng-model="quantity"/>
-                    </div>
-                    <br>
-                    <div>
-                        <button
-                            class="snipcart-add-item"
-                            data-item-id="{{selectedProduct.id}}"
-                            data-item-name="{{selectedProduct.title}}"
-                            data-item-price="{{selectedProduct.price}}"
-                            data-item-weight="{{selectedProduct.weight}}"
-                            data-item-url="{{selectedProduct.url}}"
-                            data-item-description="{{selectedProduct.description}}"
-                            data-item-taxable="true"
-                            data-item-taxes="TPS|TVQ"
-                            data-item-quantity="{{quantity}}"
-                            ng-click="toggleModal()">
-                            Ajouter au panier
-                        </button>
-                    </div>
-                    <br>
-                    <div>
-                        <span class="text">{{selectedProduct.descriptionF}}</span>
-                    </div>
-                    <br>
-                    <div>
-                        <span class="text">{{selectedProduct.descriptionA}}</span>
-                    </div>
-                    <br>
-                    <div >
-                        <span class="text_bold" ng-show="selectedProduct.ingredientsF" style="font-variant: small-caps;">INGRÉDIENTS</span>
-                    </div>
-                    <div >
-                        <span class="text">{{selectedProduct.ingredientsF}} </span>
+                <div class="col-sm-5 col-md-5">
+                    <input class="poduct_detail_image" type="image" ng-src="{{displayProductImage}}"/>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div style="float:right">
+                        <div>
+                            <span class="text_bold">{{selectedProduct.title}}</span>
+                        </div>
                         <br>
+                        <div>
+                            <span class="text_bold">{{selectedProduct.price}}$</span>
+                        </div>
                         <br>
-                        <span class="text">{{selectedProduct.ingredientsA}} </span>
-                    </div>
-                    <br>
-                    <div>
-                        <img src="{{selectedProduct.ingimgae}}"/>
+                        <div>
+                            <span class="text_bold">QNT.</span>
+                        </div>
+                        <div>
+                            <input class="text" style="border:1px solid;text-align:center; max-width:50px" data-ng-model="quantity"/>
+                        </div>
+                        <br>
+                        <div>
+                            <button
+                                class="snipcart-add-item"
+                                data-item-id="{{selectedProduct.id}}"
+                                data-item-name="{{selectedProduct.title}}"
+                                data-item-price="{{selectedProduct.price}}"
+                                data-item-weight="{{selectedProduct.weight}}"
+                                data-item-url="{{selectedProduct.url}}"
+                                data-item-description="{{selectedProduct.description}}"
+                                data-item-taxable="true"
+                                data-item-taxes="TPS|TVQ"
+                                data-item-quantity="{{quantity}}"
+                                ng-click="toggleModal()">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                        <br>
+                        <div>
+                            <span class="text">{{selectedProduct.descriptionF}}</span>
+                        </div>
+                        <br>
+                        <div>
+                            <span class="text">{{selectedProduct.descriptionA}}</span>
+                        </div>
+                        <br>
+                        <div >
+                            <span class="text_bold" ng-show="selectedProduct.ingredientsF" style="font-variant: small-caps;">INGRÉDIENTS</span>
+                        </div>
+                        <div >
+                            <span class="text">{{selectedProduct.ingredientsF}} </span>
+                            <br>
+                            <br>
+                            <span class="text">{{selectedProduct.ingredientsA}} </span>
+                        </div>
+                        <br>
+                        <div>
+                            <img src="{{selectedProduct.ingimgae}}"/>
+                        </div>
                     </div>
                 </div>
+                <!-- /.container -->
             </div>
-            <!-- /.container -->
         </div>
     </div>
 </div>
