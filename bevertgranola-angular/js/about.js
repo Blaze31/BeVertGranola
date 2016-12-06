@@ -4,7 +4,7 @@ app.controller('carouselCtrl',['$scope', function ($scope) {
   $scope.active = 0;
   var slides = $scope.slides = [];
   var currIndex = 0;
-  var images = ['../images/diapo_04.jpg','../images/diapo_05.jpg','../images/diapo_06.jpg'];
+  var images = ['../images/diapo_06.jpg','../images/diapo_04.jpg','../images/diapo_05.jpg'];
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
     slides.push({
@@ -56,6 +56,9 @@ app.controller('aboutCtrl',['$scope',function($scope){
     }
     if(path == 'instagram'){
        window.open('https://www.instagram.com/bevert_granola/','_blank');
+    }
+    if(path == 'pinterest'){
+      window.open('https://www.pinterest.com/bevertgrano1923/?etslf=7911&eq=be%20vert%20','_blank');
     }
   }
 }]);

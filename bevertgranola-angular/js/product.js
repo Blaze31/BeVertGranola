@@ -1,9 +1,10 @@
-app.controller('productCtrl',['$scope','$location','productService', function ($scope,$location,productService) {
+app.controller('productCtrl',function ($scope,$location,$stateParams,product) {
     $(".nav").find(".active").removeClass("active");
     $(".nav").find("#link_store").addClass("active");
+    
     var productId = Number($location.path()[$location.path().length - 1]);
-    $scope.selectedProduct = productService.getProductId(productId);
-    $scope.displayProductImage = $scope.selectedProduct.img;
+    $scope.selectedProduct = product;
+    $scope.displayProductImage = $scope.selectedProduct.image;
     $scope.listImageDetails = getDetailsImages($scope.selectedProduct.detailsimages);
     $scope.showImageDetail = $scope.listImageDetails.length > 0?true:false;
     $scope.quantity = 1;
@@ -21,7 +22,6 @@ app.controller('productCtrl',['$scope','$location','productService', function ($
         $scope.displayProductImage = image.src;
     }
     function getDetailsImages(listImageSrcString){
-        console.log(listImageSrcString == "");
         var returnListImagesObject = [];
         if(listImageSrcString == ""){
             return returnListImagesObject;
@@ -34,4 +34,4 @@ app.controller('productCtrl',['$scope','$location','productService', function ($
         }
         return returnListImagesObject;
     }
-}]);
+});

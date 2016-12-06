@@ -1,38 +1,43 @@
+
+
 var app = angular.module('beVertGranolaApp', [
   'ui.router',
   'ui.bootstrap'
 ])
 .factory('productService', function ($http, $q) {
-        var productsLists = [];
-        var selectedProduct = {};
-        var products = $http.get('../products.json').then(function(response){
-            productsLists = response.data;
-            return response.data;
-          });
+  var config = {
+    data:'',
+    headers:{
+      'Accept':'application/json',
+      'Content-Type':'application/json'
+    }
+  }
+    var json = $http.get('/products.json',config)
+    .then(function (response) {
+      return response.data;
+    });
 
-        return {
-          query: function(){
-            return products;
-          },
-          getProductsList: function(){
-            return productsLists
-          },
-          getSelectedProduct: function () {
-              return selectedProduct;
-          },
-          setSelectedProduct: function(value) {
-              selectedProduct = value;
-          },
-          getProductId: function(id){
-             var indexes = $.map(productsLists, function(obj, index) {
-                if(obj.id == id) {
-                    return index;
-                }
-            });
-            return productsLists[indexes];
-          }
-        };
-});
+    return {
+      query: function() {
+        return json;
+      },
+      get: function(id) {
+        var q = $q.defer();
+
+        json.then(function (items) {
+          angular.forEach(items, function (item) {
+            if (id == item.id) {
+              q.resolve(item);
+              return;
+            }
+          })
+        });
+
+        return q.promise;
+      },
+
+    };
+  });
 
 app.config(function($stateProvider,$urlRouterProvider,$locationProvider){
   $urlRouterProvider.rule(function ($injector, $location) {
@@ -65,13 +70,13 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider){
       }
     })
     .state('product', {
-      url:'/store/:id',
+      url:'/store/{id}',
       templateUrl: '../partials/product.html',
       controller: 'productCtrl',
       resolve: {
-        products: function($q, productService){
+        product: function($q, $stateParams, productService){
           var def = $q.defer();
-          productService.query().then(function(data){
+          productService.get($stateParams.id).then(function(data){
             def.resolve(data);
           });
           return def.promise;
@@ -107,9 +112,9 @@ app.controller('PageCtrl', ['$scope','$location', function ( $scope, $location) 
 }]);
 
 Snipcart.subscribe('cart.opened', function() {
-    console.log('Snipcart popup is visible');
+    //console.log('Snipcart popup is visible');
 });
 Snipcart.subscribe('cart.closed', function() {
-    console.log('Snipcart popup has been closed');
+    //console.log('Snipcart popup has been closed');
 });
 Snipcart.api.cart.currency('cad');

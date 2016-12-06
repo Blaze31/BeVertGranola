@@ -8,7 +8,7 @@ Test card declined
 -->
 <link rel="stylesheet" href="../css/product.css">
 <div class="container-fluid">
-    <div ng-controller="productCtrl">
+    <div >
         <div class="product_page">
             <div class="row">
                 <div class="col-sm-1 col-md-1">
@@ -24,11 +24,11 @@ Test card declined
                 <div class="col-sm-6 col-md-6">
                     <div style="float:right">
                         <div>
-                            <span class="text_bold">{{selectedProduct.title}}</span>
+                            <span class="text_bold">{{selectedProduct.name}}</span>
                         </div>
                         <br>
                         <div>
-                            <span class="text_bold">{{selectedProduct.price}}$</span>
+                            <span class="text_bold">{{selectedProduct.price}} $</span>
                         </div>
                         <br>
                         <div>
@@ -42,21 +42,21 @@ Test card declined
                             <button
                                 class="snipcart-add-item"
                                 data-item-id="{{selectedProduct.id}}"
-                                data-item-name="{{selectedProduct.title}}"
+                                data-item-name="{{selectedProduct.name}}"
                                 data-item-price="{{selectedProduct.price}}"
+                                data-item-image="{{selectedProduct.image}}"
                                 data-item-weight="{{selectedProduct.weight}}"
                                 data-item-url="{{selectedProduct.url}}"
                                 data-item-description="{{selectedProduct.description}}"
-                                data-item-taxable="true"
-                                data-item-taxes="TPS|TVQ"
                                 data-item-quantity="{{quantity}}"
+                                data-item-taxable="false"
                                 ng-click="toggleModal()">
                                 Ajouter au panier
                             </button>
                         </div>
                         <br>
                         <div>
-                            <span class="text">{{selectedProduct.descriptionF}}</span>
+                            <span class="text">{{selectedProduct.description}}</span>
                         </div>
                         <br>
                         <div>

@@ -9,17 +9,19 @@
     </div>
     <div class="row">
         <div class="product_section">
-            <div ng-repeat="product in products track by product.id" ng-click="selectproduct(product.id)">
+            <div ng-repeat="product in products" >
                 <div class="product" >
-                    <div class="col-sm-4 col-md-4">
-                        <div>
-                            <input class="poduct_image" type="image" ng-src="{{product.img}}">
-                        </div>
-                        <div>
-                            <span class="text_bold">{{product.title}}</span>
-                        </div>
-                        <div>
-                            <span class="text">{{product.price}} $</span>
+                    <div class="col-sm-4 col-md-4"  >
+                        <div ui-sref="product({id:product.id})">
+                            <div>
+                                <input class="poduct_image" type="image" ng-src="{{product.image}}">
+                            </div>
+                            <div>
+                                <span class="text_bold">{{product.name}}</span>
+                            </div>
+                            <div>
+                                <span class="text">{{product.price}} $</span>
+                            </div>
                         </div>
                     </div>
                 </div>
