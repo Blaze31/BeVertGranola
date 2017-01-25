@@ -4,10 +4,13 @@ app.controller('productCtrl',function ($scope,$location,$stateParams,product) {
     
     var productId = Number($location.path()[$location.path().length - 1]);
     $scope.selectedProduct = product;
+    $scope.options = product.options != ""? JSON.parse(product.options.replace(/'/g,'"')):"";
+    $scope.hasOptions = product.options != ""?true:false;
     $scope.displayProductImage = $scope.selectedProduct.image;
     $scope.listImageDetails = getDetailsImages($scope.selectedProduct.detailsimages);
     $scope.showImageDetail = $scope.listImageDetails.length > 0?true:false;
     $scope.quantity = 1;
+    $scope.optionValue = $scope.options != ""?$scope.options.options.split('|'):"";
     $scope.redirectToStore = function(){
         $location.path("/store");
         $("#cart").fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);

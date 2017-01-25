@@ -38,8 +38,8 @@ Test card declined
                             <input class="text" style="border:1px solid;text-align:center; max-width:50px" data-ng-model="quantity"/>
                         </div>
                         <br>
-                        <div>
-                            <button
+                        <div id="cart_btn">
+                            <button ng-show="{{hasOptions}}"
                                 class="snipcart-add-item"
                                 data-item-id="{{selectedProduct.id}}"
                                 data-item-name="{{selectedProduct.name}}"
@@ -47,9 +47,24 @@ Test card declined
                                 data-item-image="{{selectedProduct.image}}"
                                 data-item-weight="{{selectedProduct.weight}}"
                                 data-item-url="{{selectedProduct.url}}"
-                                data-item-description="{{selectedProduct.description}}"
                                 data-item-quantity="{{quantity}}"
-                                data-item-taxable="false"
+                                data-item-taxable="true"
+                                data-item-custom1-name="{{options.name}}"
+                                data-item-custom1-options="{{options.options}}"
+                                data-item-custom1-value="{{options.value}}"
+                                ng-click="toggleModal()">
+                                Ajouter au panier
+                            </button>
+                            <button ng-hide="{{hasOptions}}"
+                                class="snipcart-add-item"
+                                data-item-id="{{selectedProduct.id}}"
+                                data-item-name="{{selectedProduct.name}}"
+                                data-item-price="{{selectedProduct.price}}"
+                                data-item-image="{{selectedProduct.image}}"
+                                data-item-weight="{{selectedProduct.weight}}"
+                                data-item-url="{{selectedProduct.url}}"
+                                data-item-quantity="{{quantity}}"
+                                data-item-taxable="true"
                                 ng-click="toggleModal()">
                                 Ajouter au panier
                             </button>
